@@ -1,0 +1,12 @@
+<ag-grid-angular
+    class="ag-theme-material"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [animateRows]="true"
+    [floatingFilter]="true"
+    [defaultColDef]="defaultColDef"
+    (gridReady)="onGridReady($event)"
+    (rowClicked)=" openDialog($event.data)" 
+    [frameworkComponents]="frameworkComponents"
+    >
+</ag-grid-angular>
