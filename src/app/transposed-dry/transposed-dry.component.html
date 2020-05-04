@@ -1,0 +1,67 @@
+<div>
+    <table>
+      <tr>
+        <th align="left">Item Code</th>
+        <th align="left">Item Type</th>
+        <th align="left">Product Name</th>
+        <th align="left">Stock Balance</th>
+      </tr>
+      <tr>
+        <td>100001</td>
+        <td>Single</td>
+        <td>Samsung Note 10 White </td>
+        <td>999 </td>
+      </tr>
+     </table>
+     </div> 
+     <div class="scrollbar scrollbar-primary">
+        <div  align="right">
+          <button type="submit" mat-raised-button color="accent" style="margin-right: 10px">Stock Balance</button>
+          <!-- <button type="submit" mat-raised-button color="warn" style="margin-right: 10px">Add Store</button> -->
+        </div>  
+    <div fxLayout="row wrap">
+      <div fxFlex.gt-sm="100" fxFlex="100">
+        <div fxLayout="raw wrap" fxFlexAlign="center stretch" class="row">
+          <div fxFlex.gt-sm="100" fxFlex="100">
+          
+                <div fxLayout="row wrap">
+                  <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+                          <p>Edit Single Product</p>
+                          
+                          
+                          <ag-grid-angular
+                          #agGrid
+                          style="width: 100%; height: 1000px;"
+                          id="myGrid"
+                          class="ag-theme-material"
+                          [rowData]="rowData"
+                          [columnDefs]="columnDefs"
+                          [suppressMovableColumns]="true"
+                          [pagination]="true"
+                          (rowClicked)=" openDialog($event.data)"
+                          [defaultColDef]="defaultColDef"
+                          (cellValueChanged)="onCellValueChanged($event)"
+                          [animateRows]="true"
+                          [floatingFilter]="true"
+                          [defaultColDef]="defaultColDef"
+                          (gridReady)="onGridReady($event)"
+                          (rowClicked)=" openDialog($event.data)" 
+                          ></ag-grid-angular>
+                        </div>
+                        <!--        End Ag grid -->
+                        <!-- grid view start -->
+                        <!-- grid view end -->
+                  </div>
+                </div>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+    <div  align="right">
+      <button type="submit" mat-raised-button color="accent" style="margin-right: 10px">Update On Shopee Store 1</button>
+      <button type="submit" mat-raised-button color="success" style="margin-right: 10px">Update On LAZADA Store 1</button>
+      <button type="submit" mat-raised-button color="success" style="margin-right: 10px">Update On LAZADA Store 2</button>
+      
+      <!-- <button type="submit" mat-raised-button color="warn" style="margin-right: 10px">Add Store</button> -->
+    </div>
